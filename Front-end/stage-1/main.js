@@ -1,18 +1,18 @@
 function updateTime() {
     const now = new Date();
     const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-    
-    let hours = now.getHours();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-    const dayOfWeek = days[now.getDay()];
 
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    // Get the current time in UTC
+    const utcHours = now.getUTCHours();
+    const utcMinutes = now.getUTCMinutes();
+    const utcSeconds = now.getUTCSeconds();
+    const utcDay = days[now.getUTCDay()];
 
-    const currentTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds} ${ampm} ${dayOfWeek}`;
-    document.getElementById('current-time').textContent = currentTime;
+    const utcAmpm = utcHours >= 12 ? 'PM' : 'AM';
+    const adjustedUtcHours = utcHours % 12 || 12; // Convert hours to 12-hour format
+
+    const utcTime = `${adjustedUtcHours}:${utcMinutes < 10 ? '0' + utcMinutes : utcMinutes}:${utcSeconds < 10 ? '0' + utcSeconds : utcSeconds} ${utcAmpm} ${utcDay} UTC`;
+    document.getElementById('current-time').textContent = utcTime;
 }
 
 updateTime();
