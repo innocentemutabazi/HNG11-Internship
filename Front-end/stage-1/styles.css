@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'TAN - MON CHERI';
+    src: url('TAN-MONCHERI.woff2') format('woff2'),
+        url('TAN-MONCHERI.woff') format('woff'),
+        url('TAN-MONCHERI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+body {
+    font-family: 'Source Sans 3';
+    margin: 0;
+    padding: 0;
+    background-color: #F6E5D9;
+    color: #3C2F2F;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #3C2F2F;
+    text-transform: uppercase;
+}
+.content {
+    display: flex;
+    gap: 10%;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 900px;
+    align-items: center;
+}
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.info {
+    padding-left: 20px;
+    max-width: 400px;
+}
+.name {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'TAN - MON CHERI';
+    margin: 0;
+}
+hr{
+    border: solid 0.5px #D1966A;
+}
+.goals-title{
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.subtitle {
+    text-transform: uppercase;
+    color: #C26D2D;
+    font-size: 14px;
+    margin: 5px 0 10px 0; /* Reduced bottom margin */
+}
+.goals {
+    list-style-type: decimal;
+    font-size: 13px;
+    padding: 0;
+    margin: 10px 0; /* Reduced margin */
+}
+.goals li {
+    margin-bottom: 5px;
+    margin-left: 15px;
+
+}
+.goals li span {
+    font-weight: bold;
+}
+.contact {
+    font-size: 13px;
+    margin: 10px 0; 
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+.buttons a {
+    text-decoration: none;
+    background-color: #D1966A;
+    color: white;
+    padding: 5px 10px;
+    font-size: 13px;
+    display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  .content{
+    flex-direction: column;
+  }
+  .photo{
+    padding-bottom: 5%;
+  }
+}
