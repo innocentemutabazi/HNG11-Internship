@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="TAN-MONCHERI.woff" as="font" type="font/woff2" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="TAN-MONCHERI.woff" as="font" type="font/woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <title>Career Goals</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="header">
-      <div id="current-time"></div>
+        <div id="current-time" data-testid="currentTimeUTC" data-testid="currentDay"></div>
     </div>
     <div class="container">
-      <div class="content">
-        <div class="photo">
-          <img
-            src="./images/new pp.webp"
-            alt="Innocenie Umuhuza Mutabazi"
-          />
+        <div class="content">
+            <div class="photo">
+                <img
+                    src="./images/new pp.webp"
+                    alt="Innocenie Umuhuza Mutabazi"
+                    data-testid="slackProfilePicture"
+                />
+            </div>
+            <div class="info">
+                <h1 class="name" data-testid="slackDisplayName">Innocente Umuhuza Mutabazi</h1>
+                <div class="subtitle">ASPIRING FULLSTACK DEVELOPER</div>
+                <hr>
+                <span class="goals-title">Goals</span>
+                <ul class="goals">
+                    <li>
+                        <span>Become a Full-Stack Developer:</span> I want to master
+                        both front end and back end development to build comprehensive web
+                        applications.
+                    </li>
+                    <li>
+                        <span>Contribute to Open Source:</span> I aim to contribute to
+                        open-source projects and give back to the tech community.
+                    </li>
+                    <li>
+                        <span>Achieve a Good Work-Life Balance:</span> Balancing work
+                        with personal life is important to me, and I strive to achieve it.
+                    </li>
+                    <li>
+                        <span>Work with Clients:</span> I look forward to working with
+                        clients to build impactful projects.
+                    </li>
+                    <li>
+                        <span>Build a Good Network:</span> Networking with fellow
+                        developers and industry experts is one of my top priorities.
+                    </li>
+                </ul>
+                <div class="contact" data-testid="slackEmail">INNOCENTEMUTABAZI@GMAIL.COM</div>
+                <div class="buttons">
+                    <a href="https://hng.tech/learn" data-testid="hngLink">HNG LEARN</a>
+                    <a href="https://keyword.dog" data-testid="keywordLink">KEYWORD</a>
+                    <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">SCRAPEWEB</a>
+                </div>
+            </div>
         </div>
-        <div class="info">
-          <h1 class="name">Innocente Umuhuza Mutabazi</h1>
-          <div class="subtitle">ASPIRING FULLSTACK DEVELOPER</div>
-          <hr>
-          <span class="goals-title">Goals</span>
-          <ul class="goals">
-            <li>
-              <span>Become a Full-Stack Developer:</span> I want to master
-              both front end and back end development to build comprehensive web
-              applications.
-            </li>
-            <li>
-              <span>Contribute to Open Source:</span> I aim to contribute to
-              open-source projects and give back to the tech community.
-            </li>
-            <li>
-              <span>Achieve a Good Work-Life Balance:</span> Balancing work
-              with personal life is important to me, and I strive to achieve it.
-            </li>
-            <li>
-              <span>Work with Clients:</span> I look forward to working with
-              clients to build impactful projects.
-            </li>
-            <li>
-              <span>Build a Good Network:</span> Networking with fellow
-              developers and industry experts is one of my top priorities.
-            </li>
-          </ul>
-          <div class="contact">INNOCENTEMUTABAZI@GMAIL.COM</div>
-          <div class="buttons">
-            <a href="#">HNG LEARN</a>
-            <a href="#">KEYWORD</a>
-            <a href="#">SCRAPEWEB</a>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="./main.js"></script>
-  </body>
+</body>
 </html>
